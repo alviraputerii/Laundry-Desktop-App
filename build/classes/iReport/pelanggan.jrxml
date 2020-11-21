@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pelanggan" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="47922842-6edd-4e43-9074-f545f2c2090e">
+	<property name="ireport.zoom" value="1.948717100000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from pelanggan]]>
+	</queryString>
+	<field name="IdPelanggan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaPelanggan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NoTelpon" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="isMember" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TanggalJadiMember" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="133" splitType="Stretch">
+			<staticText>
+				<reportElement x="696" y="15" width="86" height="20" uuid="6cc7fba8-d6a7-4a0a-b1f6-20137bbbe5e6"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WaCo Laundry]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="609" y="35" width="173" height="20" uuid="dc7a702a-911f-43b0-a6cc-7a80610227aa"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Jalan Hollywood Boulevard
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="609" y="55" width="173" height="20" uuid="0bd0d5d0-daab-4ebe-883f-dc48c6f0a18e"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Bandung, Jawa Barat 12345
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="55" width="214" height="20" uuid="10eddd0b-f9d7-4423-a381-9e2c3efb75c8"/>
+				<textElement>
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN LIST PELANGGAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="724" y="75" width="58" height="20" uuid="9923d201-3514-4c64-a9d0-6b66d373faef"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Indonesia
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="22" y="120" width="760" height="1" uuid="5dc5650a-cf60-4628-b743-a7da964c5fc1"/>
+			</line>
+			<image>
+				<reportElement x="44" y="15" width="92" height="85" uuid="c261446d-6dd4-4932-a203-e1846585a154"/>
+				<imageExpression><![CDATA["D:\\Desktop\\UAS-PBOL-1873004-AlviraPuteri\\src\\assets\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="85" y="3" width="100" height="20" uuid="4c0f1ef2-76c3-4e10-934f-a8716076fde1"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="3" width="100" height="20" uuid="9ea88ac4-5627-435d-8e27-e1dcff1ef891"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="3" width="100" height="20" uuid="3b0d2fdf-8292-4073-bf2b-8b7f4dfe90c3"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nomor Telpon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="489" y="3" width="58" height="20" uuid="357c88fa-2981-4d38-8f53-e79429a7ce66"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="609" y="3" width="143" height="20" uuid="1ef89a85-9e0e-44f3-8799-d34fc314c5b2"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status Membership]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="110" y="4" width="62" height="20" uuid="e9a85320-b256-437b-90d5-c2c1992da0ff"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IdPelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="203" y="3" width="100" height="20" uuid="5c8bebb5-5301-4f43-8f58-68cf32c570e8"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NamaPelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="335" y="3" width="100" height="20" uuid="c8aa4542-2c0b-4e50-86bf-2abd06f4feca"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NoTelpon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="3" width="100" height="20" uuid="84ba0cfe-d5f4-4086-ac47-8451e0ea27ed"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="622" y="3" width="100" height="20" uuid="8d2da12c-a950-42d8-aee0-156b483aad86"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{isMember}== 1?"Aktif":"Tidak Aktif"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

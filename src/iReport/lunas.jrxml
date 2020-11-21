@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lunas" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="47922842-6edd-4e43-9074-f545f2c2090e">
+	<property name="ireport.zoom" value="2.8531167061100215"/>
+	<property name="ireport.x" value="309"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from transaksi t
+join pelanggan p
+on t.idpelanggan = p.idpelanggan
+join karyawan k
+on t.idkaryawan = k.idkaryawan
+join jenislayanan l
+on t.idlayanan = l.idlayanan
+where statustransaksi = 1]]>
+	</queryString>
+	<field name="IdTransaksi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TanggalTerima" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TanggalSelesai" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Berat" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdPelanggan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdKaryawan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdLayanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Notes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StatusLaundry" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StatusPengantaran" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdPengantar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StatusTransaksi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TanggalAntar" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaPelanggan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NoTelpon" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="isMember" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TanggalJadiMember" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaKaryawan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Username" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Password" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="isAdmin" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdJabatan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaLayanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Harga" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StockDipakai" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdInventory" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="133" splitType="Stretch">
+			<staticText>
+				<reportElement x="696" y="15" width="86" height="20" uuid="6cc7fba8-d6a7-4a0a-b1f6-20137bbbe5e6"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WaCo Laundry]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="623" y="35" width="159" height="20" uuid="dc7a702a-911f-43b0-a6cc-7a80610227aa"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Jalan Hollywood Boulevard
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="623" y="55" width="159" height="20" uuid="0bd0d5d0-daab-4ebe-883f-dc48c6f0a18e"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Bandung, Jawa Barat 12345
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="302" y="55" width="221" height="20" uuid="10eddd0b-f9d7-4423-a381-9e2c3efb75c8"/>
+				<textElement>
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN TRANSAKSI LUNAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="724" y="75" width="58" height="20" uuid="9923d201-3514-4c64-a9d0-6b66d373faef"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Indonesia
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="22" y="120" width="760" height="1" uuid="5dc5650a-cf60-4628-b743-a7da964c5fc1"/>
+			</line>
+			<image>
+				<reportElement x="44" y="15" width="92" height="85" uuid="c261446d-6dd4-4932-a203-e1846585a154"/>
+				<imageExpression><![CDATA["D:\\Desktop\\UAS-PBOL-1873004-AlviraPuteri\\src\\assets\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="25" y="3" width="24" height="20" uuid="fba72152-2408-4f3c-be9a-9523acc6660f"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="3" width="89" height="20" uuid="e261590a-152e-4a19-a587-6909ad02ad5a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Terima]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="3" width="89" height="20" uuid="a7ac258b-e224-4bdb-97e6-439b4c6f2a8c"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Selesai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="3" width="86" height="20" uuid="8edb0cec-99eb-438b-840b-7adda7f3ab28"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="3" width="94" height="20" uuid="a30ef819-c76c-423a-88dc-69ef106dfb85"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="491" y="3" width="60" height="20" uuid="76686fb0-c156-43f1-8957-8bdc1ae6e799"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Layanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="556" y="3" width="67" height="20" uuid="97eff1a9-db4e-4e23-88d0-e610f3b0d726"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Berat /kg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="620" y="3" width="100" height="20" uuid="ad12880d-6e33-4286-98f4-660d4893fc75"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga Layanan / kg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="725" y="3" width="71" height="20" uuid="f5528939-568a-4b99-8af6-bdefbdef9008"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="3" width="69" height="20" uuid="290d819a-8c98-4ee9-bec3-bebf38f507b3"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Transaksi]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="68" y="3" width="79" height="20" uuid="6de3cbf1-2d0c-4e99-b532-d562be0180b6"/>
+				<textElement>
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TanggalTerima}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="150" y="3" width="74" height="20" uuid="346b29c5-86d0-4ca5-8a99-097ae6097866"/>
+				<textElement>
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TanggalSelesai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="3" width="37" height="20" uuid="3db4d643-e084-4b7c-ab53-eab091eecf1a"/>
+				<textElement>
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IdTransaksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="313" y="3" width="86" height="20" uuid="1c599bf8-8a3a-4c94-a13e-ecfde7be5139"/>
+				<textElement>
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NamaKaryawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="409" y="3" width="94" height="20" uuid="496404fb-7598-4474-9b9a-3fb675ac3c53"/>
+				<textElement>
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NamaPelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="503" y="3" width="60" height="20" uuid="60237f45-33cd-4f4d-aabc-9d294d0e8e8c"/>
+				<textElement>
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IdLayanan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="571" y="3" width="67" height="20" uuid="30d411d3-822c-41a0-9fd4-5849db1f207e"/>
+				<textElement>
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Berat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="641" y="3" width="83" height="20" uuid="01ca2805-e3d1-4d4f-a96c-c571c0758753"/>
+				<textElement>
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="737" y="3" width="59" height="20" uuid="5ca92285-af31-42be-8684-99bd40c36eed"/>
+				<textElement>
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="27" y="3" width="17" height="20" uuid="9b7bc589-f2dc-45b7-b3da-e3eb46388112"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

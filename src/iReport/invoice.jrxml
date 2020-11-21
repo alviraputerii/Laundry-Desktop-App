@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="invoice" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b761e5b6-e8e6-4fcd-af93-1a103e5e40a5">
+	<property name="ireport.zoom" value="3.797498335832424"/>
+	<property name="ireport.x" value="1432"/>
+	<property name="ireport.y" value="765"/>
+	<queryString>
+		<![CDATA[select * from transaksi t
+join pelanggan p
+on t.idpelanggan = p.idpelanggan
+join karyawan k
+on t.idkaryawan = k.idkaryawan
+join jenislayanan l
+on t.idlayanan = l.idlayanan
+where statustransaksi = 1]]>
+	</queryString>
+	<field name="IdTransaksi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TanggalTerima" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TanggalSelesai" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Berat" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdPelanggan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdKaryawan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdLayanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Notes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StatusLaundry" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StatusPengantaran" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdPengantar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StatusTransaksi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TanggalAntar" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaPelanggan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NoTelpon" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="isMember" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TanggalJadiMember" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaKaryawan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Username" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Password" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="isAdmin" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdJabatan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaLayanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Harga" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StockDipakai" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdInventory" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="133" splitType="Stretch">
+			<staticText>
+				<reportElement x="611" y="30" width="159" height="20" uuid="5515a890-e9ec-4793-acaa-30095fec70ab"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Jalan Hollywood Boulevard
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="712" y="70" width="58" height="20" uuid="529c00e1-f064-4687-927f-5ec99efc0ca5"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Indonesia
+]]></text>
+			</staticText>
+			<image>
+				<reportElement x="32" y="10" width="92" height="85" uuid="2b1a4725-5250-4845-bc98-fbe6cb1a5e15"/>
+				<imageExpression><![CDATA["D:\\Desktop\\UAS-PBOL-1873004-AlviraPuteri\\src\\assets\\logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="352" y="50" width="93" height="20" uuid="90669e17-8030-44b5-865c-1674dc6ed75a"/>
+				<textElement>
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INVOICE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="32" y="115" width="738" height="1" uuid="2b5ee5a0-10eb-4cfc-a959-12a691e759bd"/>
+			</line>
+			<staticText>
+				<reportElement x="684" y="10" width="86" height="20" uuid="1d30806c-ad76-46cf-a673-cf02a17ec81e"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WaCo Laundry]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="611" y="50" width="159" height="20" uuid="df4779a6-ae71-4197-aed1-c0523fcb8906"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Bandung, Jawa Barat 12345
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="129" splitType="Stretch">
+			<textField>
+				<reportElement x="43" y="30" width="100" height="20" uuid="b121c19b-9e2a-4031-a14d-f7b47115d0ee"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NamaPelanggan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="43" y="96" width="100" height="20" uuid="c33fa4fa-5cee-4121-aefa-9023322dea84"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Status Memberhsip :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="695" y="68" width="100" height="20" uuid="0e15ab7d-2b29-45c7-842a-f0a00f9fdf76"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TanggalSelesai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="96" width="100" height="20" uuid="b7f8b33a-b957-4a5b-ac74-42cb428292b4"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{isMember}== 1?"Aktif":"Tidak Aktif"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="695" y="30" width="100" height="20" uuid="e2b0a36c-087f-4749-8904-7ec57da867ef"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IdTransaksi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="43" y="10" width="100" height="20" uuid="79cad03f-ae24-4eed-b416-e17addd76714"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pembayaran Oleh :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="43" y="68" width="100" height="20" uuid="6a1cb303-6fe1-45a8-b472-b88701cd29d7"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NoTelpon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="43" y="50" width="100" height="20" uuid="7d47ece4-69e6-4a19-95bb-06964970d422"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Alamat}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="695" y="48" width="100" height="20" uuid="65012da7-a979-4001-901a-b7d6683522c2"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TanggalTerima}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="587" y="30" width="100" height="20" uuid="1864ebca-84b0-4448-9b9b-a2ea0c076779"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Transaksi :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="587" y="68" width="100" height="20" uuid="5130fcb2-c088-469e-be20-b04ec08057fd"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Selesai :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="587" y="48" width="100" height="20" uuid="4d679d6e-4d28-49b4-9b84-1636aefae138"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggan terima :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="171" y="3" width="100" height="20" uuid="88ffce88-feff-4dce-a8e6-dba2e76ba144"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NamaLayanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="3" width="100" height="20" uuid="a57f6c32-97bd-4435-85e4-ac86d19f3466"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Berat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="489" y="3" width="100" height="20" uuid="5c3a4ad8-10c2-4dfa-af87-777f3e6e5738"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga /kg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="605" y="4" width="79" height="20" uuid="0da4c978-fa8b-488d-b7d3-0901a205edc6"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jumlah Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="3" width="28" height="20" uuid="c9751068-2f6d-44ce-b18a-023f364aed10"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="23" width="564" height="1" uuid="737681f8-2866-4df6-8e9f-433dd381675c"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="151" y="6" width="1" height="22" uuid="02c24017-61ca-442e-ae9d-6982ddb260dd"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="171" y="4" width="169" height="20" uuid="91d0bc4a-8045-4650-9535-386d285ddf61"/>
+				<textFieldExpression><![CDATA[$F{NamaLayanan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="389" y="4" width="80" height="20" uuid="b7b75dce-0d45-4ca3-b334-3d44b0601bfd"/>
+				<textFieldExpression><![CDATA[$F{Berat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="489" y="4" width="100" height="20" uuid="72b22b2a-f013-4a49-a786-59b11d2712e3"/>
+				<textFieldExpression><![CDATA[$F{Harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="4" width="23" height="20" uuid="fd59ce48-925b-4575-8fc1-f45ae9013fe8"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="613" y="4" width="101" height="20" uuid="1ceb550e-bb38-4f1b-abda-46afe3c88ac3"/>
+				<textFieldExpression><![CDATA[$F{Berat}*$F{Harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="171" y="24" width="304" height="20" uuid="2e5097ea-508e-4a2c-a2e0-11a4accf16d1"/>
+				<textFieldExpression><![CDATA[$F{StatusPengantaran} ==0?"*Laundry Tidak Diantar":($F{StatusPengantaran} >0 && $F{isMember} ==1?"*Laundry Diantar (Gratis Biaya Antar)":"*Laundry Diantar")]]></textFieldExpression>
+			</textField>
+			<line direction="BottomUp">
+				<reportElement x="151" y="0" width="1" height="44" uuid="13196c26-8711-4d71-bf91-21bf9e562edf"/>
+			</line>
+			<textField>
+				<reportElement x="489" y="24" width="100" height="20" uuid="d80b6cd8-1f8a-4fae-9b42-6fe82ca92298"/>
+				<textFieldExpression><![CDATA[$F{StatusPengantaran} ==0?"":"2000.0"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="614" y="24" width="100" height="20" uuid="def4736c-9ff1-4740-ac32-046c3e6cabec"/>
+				<textFieldExpression><![CDATA[$F{StatusPengantaran} ==0?"":($F{StatusPengantaran} >0 && $F{isMember} ==1)?"0.0":2000*$F{Berat}+".0"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="614" y="4" width="100" height="20" uuid="fd2d8cf7-dca4-43d8-9157-843dd936ed16"/>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="475" y="4" width="100" height="20" uuid="e68f3aa4-851e-44f7-b7d1-b37974aefbfb"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
